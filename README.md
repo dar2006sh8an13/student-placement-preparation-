@@ -155,3 +155,4 @@ The application should now be running on `http://localhost:3000` (or specified p
 
 ## 📜 License
 This project is licensed under the [MIT License](LICENSE) - see the LICENSE file for details.
+@nitinsnitins13@gmail.com
