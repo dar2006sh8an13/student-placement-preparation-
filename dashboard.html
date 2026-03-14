@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard – PlacePro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="logo">Place<span>Pro</span></a>
+      <ul class="nav-links">
+        <li><a href="dashboard.html" class="active">Dashboard</a></li>
+        <li><a href="aptitude.html">Aptitude</a></li>
+        <li><a href="coding.html">Coding</a></li>
+        <li><a href="interview.html">Interview</a></li>
+        <li><a href="resume.html">Resume</a></li>
+      </ul>
+      <div class="nav-actions">
+        <span class="user-pill">👤 Rahul</span>
+      </div>
+    </div>
+  </nav>
+
+  <main class="dashboard-main">
+    <div class="container">
+      <!-- WELCOME -->
+      <div class="dash-welcome">
+        <div>
+          <h1>Good morning, Rahul! 👋</h1>
+          <p class="muted">You're on a <strong>5-day streak</strong> — keep it up!</p>
+        </div>
+        <div class="streak-badge">🔥 5</div>
+      </div>
+
+      <!-- STATS ROW -->
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="sc-icon" style="background:#fff3e0;">🧮</div>
+          <div class="sc-info">
+            <span class="sc-num">72%</span>
+            <span class="sc-label">Aptitude Score</span>
+          </div>
+          <div class="sc-trend up">↑ 8%</div>
+        </div>
+        <div class="stat-card">
+          <div class="sc-icon" style="background:#e8f5e9;">💻</div>
+          <div class="sc-info">
+            <span class="sc-num">23</span>
+            <span class="sc-label">Problems Solved</span>
+          </div>
+          <div class="sc-trend up">↑ 5</div>
+        </div>
+        <div class="stat-card">
+          <div class="sc-icon" style="background:#e3f2fd;">🎤</div>
+          <div class="sc-info">
+            <span class="sc-num">40%</span>
+            <span class="sc-label">Interview Prep</span>
+          </div>
+          <div class="sc-trend neutral">→ 0%</div>
+        </div>
+        <div class="stat-card">
+          <div class="sc-icon" style="background:#f3e5f5;">📄</div>
+          <div class="sc-info">
+            <span class="sc-num">1</span>
+            <span class="sc-label">Resume Draft</span>
+          </div>
+          <div class="sc-trend up">✓ Saved</div>
+        </div>
+      </div>
+
+      <!-- MAIN CONTENT -->
+      <div class="dash-grid">
+        <!-- PRACTICE MODULES -->
+        <div class="dash-col">
+          <h2 class="dash-section-title">Practice Modules</h2>
+          <div class="module-cards">
+            <a href="aptitude.html" class="module-card apt">
+              <div class="mc-left">
+                <span class="mc-icon">🧮</span>
+                <div>
+                  <h4>Aptitude</h4>
+                  <p>Quant, Reasoning, Verbal</p>
+                </div>
+              </div>
+              <div class="mc-right">
+                <div class="mini-prog"><div class="mini-fill" style="width:72%"></div></div>
+                <span class="mc-pct">72%</span>
+              </div>
+            </a>
+            <a href="coding.html" class="module-card cod">
+              <div class="mc-left">
+                <span class="mc-icon">💻</span>
+                <div>
+                  <h4>Coding</h4>
+                  <p>DSA, Problem Solving</p>
+                </div>
+              </div>
+              <div class="mc-right">
+                <div class="mini-prog"><div class="mini-fill blue" style="width:55%"></div></div>
+                <span class="mc-pct">55%</span>
+              </div>
+            </a>
+            <a href="interview.html" class="module-card int">
+              <div class="mc-left">
+                <span class="mc-icon">🎤</span>
+                <div>
+                  <h4>Interview Prep</h4>
+                  <p>HR + Technical Q&amp;A</p>
+                </div>
+              </div>
+              <div class="mc-right">
+                <div class="mini-prog"><div class="mini-fill purple" style="width:40%"></div></div>
+                <span class="mc-pct">40%</span>
+              </div>
+            </a>
+            <a href="resume.html" class="module-card res">
+              <div class="mc-left">
+                <span class="mc-icon">📄</span>
+                <div>
+                  <h4>Resume</h4>
+                  <p>Tips, Templates, AI Help</p>
+                </div>
+              </div>
+              <div class="mc-right">
+                <div class="mini-prog"><div class="mini-fill pink" style="width:20%"></div></div>
+                <span class="mc-pct">20%</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- RECENT ACTIVITY -->
+        <div class="dash-col">
+          <h2 class="dash-section-title">Recent Activity</h2>
+          <div class="activity-list">
+            <div class="activity-item">
+              <div class="ac-dot green"></div>
+              <div class="ac-info">
+                <span class="ac-title">Aptitude Mock Test #3</span>
+                <span class="ac-meta">Score: 8/10 · Today, 10:30 AM</span>
+              </div>
+              <span class="ac-badge success">Passed</span>
+            </div>
+            <div class="activity-item">
+              <div class="ac-dot blue"></div>
+              <div class="ac-info">
+                <span class="ac-title">Two Sum – LeetCode Easy</span>
+                <span class="ac-meta">Runtime: 52ms · Yesterday</span>
+              </div>
+              <span class="ac-badge info">Solved</span>
+            </div>
+            <div class="activity-item">
+              <div class="ac-dot orange"></div>
+              <div class="ac-info">
+                <span class="ac-title">HR Question Practice</span>
+                <span class="ac-meta">5 questions attempted · 2 days ago</span>
+              </div>
+              <span class="ac-badge warn">Partial</span>
+            </div>
+            <div class="activity-item">
+              <div class="ac-dot purple"></div>
+              <div class="ac-info">
+                <span class="ac-title">Resume Draft Saved</span>
+                <span class="ac-meta">Version 1 · 3 days ago</span>
+              </div>
+              <span class="ac-badge neutral">Saved</span>
+            </div>
+            <div class="activity-item">
+              <div class="ac-dot green"></div>
+              <div class="ac-info">
+                <span class="ac-title">Logical Reasoning – Seating Arrangement</span>
+                <span class="ac-meta">Score: 6/10 · 4 days ago</span>
+              </div>
+              <span class="ac-badge warn">Review</span>
+            </div>
+          </div>
+
+          <!-- RECOMMENDED -->
+          <h2 class="dash-section-title" style="margin-top:2rem;">Recommended for You</h2>
+          <div class="recommend-list">
+            <a href="aptitude.html" class="rec-item">📐 Geometry &amp; Mensuration Practice</a>
+            <a href="coding.html" class="rec-item">🔗 Linked List Problems – Medium Set</a>
+            <a href="interview.html" class="rec-item">💬 "Tell me about yourself" — Perfect Answer</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

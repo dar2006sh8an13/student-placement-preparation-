@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Resume Tips – PlacePro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="logo">Place<span>Pro</span></a>
+      <ul class="nav-links">
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="aptitude.html">Aptitude</a></li>
+        <li><a href="coding.html">Coding</a></li>
+        <li><a href="interview.html">Interview</a></li>
+        <li><a href="resume.html" class="active">Resume</a></li>
+      </ul>
+      <div class="nav-actions"><span class="user-pill">👤 Rahul</span></div>
+    </div>
+  </nav>
+
+  <main class="page-main">
+    <div class="container">
+      <div class="page-header">
+        <div>
+          <h1>📄 Resume Guidance</h1>
+          <p class="muted">Build a resume that gets you to the interview stage</p>
+        </div>
+      </div>
+
+      <!-- TABS -->
+      <div class="cat-tabs">
+        <button class="cat-tab active" onclick="showResume('tips', this)">💡 Tips</button>
+        <button class="cat-tab" onclick="showResume('format', this)">📐 Format Guide</button>
+        <button class="cat-tab" onclick="showResume('sample', this)">📋 Sample Resume</button>
+        <button class="cat-tab" onclick="showResume('ai', this)">🤖 AI Checker</button>
+      </div>
+
+      <!-- TIPS -->
+      <div class="resume-section" id="tips">
+        <div class="tips-grid">
+          <div class="tip-card red-tip">
+            <h4>❌ Common Mistakes</h4>
+            <ul>
+              <li>Generic objective statement ("To work in a challenging environment...")</li>
+              <li>Using "responsible for" instead of action verbs</li>
+              <li>Including photos, DOB, religion, marital status</li>
+              <li>Exceeding 1 page for freshers</li>
+              <li>Spelling and grammar errors</li>
+              <li>Listing every project without context</li>
+            </ul>
+          </div>
+          <div class="tip-card green-tip">
+            <h4>✅ Best Practices</h4>
+            <ul>
+              <li>Start bullet points with strong action verbs: Built, Designed, Optimized, Led...</li>
+              <li>Quantify your impact: "Reduced load time by 40%", "Led a team of 5"</li>
+              <li>Tailor your resume for each company/role</li>
+              <li>Use a clean, ATS-friendly format</li>
+              <li>List projects with: Name | Tech Stack | What it does | Impact</li>
+              <li>Keep it to exactly 1 page as a fresher</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="do-donts-section">
+          <h3>Action Verbs to Use</h3>
+          <div class="verb-grid">
+            <div class="verb-group"><h5>Built / Created</h5>Developed, Built, Engineered, Designed, Architected, Launched</div>
+            <div class="verb-group"><h5>Improved</h5>Optimized, Refactored, Enhanced, Streamlined, Accelerated, Boosted</div>
+            <div class="verb-group"><h5>Led / Managed</h5>Led, Managed, Coordinated, Spearheaded, Directed, Organized</div>
+            <div class="verb-group"><h5>Analyzed</h5>Analyzed, Researched, Identified, Evaluated, Assessed, Investigated</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- FORMAT GUIDE -->
+      <div class="resume-section" id="format" style="display:none;">
+        <div class="format-guide">
+          <h3>Recommended Resume Sections (in order)</h3>
+          <div class="format-steps">
+            <div class="fs-item">
+              <div class="fs-num">1</div>
+              <div class="fs-content">
+                <h4>Header</h4>
+                <p>Full Name | Phone | Email | LinkedIn | GitHub | Portfolio (optional)</p>
+                <div class="fs-tip">💡 No photo, DOB, or address needed for most tech companies.</div>
+              </div>
+            </div>
+            <div class="fs-item">
+              <div class="fs-num">2</div>
+              <div class="fs-content">
+                <h4>Education</h4>
+                <p>Degree, Branch, College Name | CGPA | Graduation Year</p>
+                <div class="fs-example">B.Tech in Computer Science, XYZ Engineering College | CGPA: 8.4/10 | 2025</div>
+              </div>
+            </div>
+            <div class="fs-item">
+              <div class="fs-num">3</div>
+              <div class="fs-content">
+                <h4>Skills</h4>
+                <p>Organize by category: Languages | Frameworks | Tools | Databases</p>
+                <div class="fs-example">Languages: Python, JavaScript, Java | Frameworks: React, Node.js | Tools: Git, Docker</div>
+              </div>
+            </div>
+            <div class="fs-item">
+              <div class="fs-num">4</div>
+              <div class="fs-content">
+                <h4>Projects (Most Important!)</h4>
+                <p>2-3 strong projects. Each with: Name | Tech Stack | 2-3 bullet points with impact.</p>
+                <div class="fs-example">PlacePro – Student Placement Platform | React, Node.js, MongoDB<br/>• Built full-stack platform serving 500+ students<br/>• Reduced average prep time by 30% via targeted practice modules</div>
+              </div>
+            </div>
+            <div class="fs-item">
+              <div class="fs-num">5</div>
+              <div class="fs-content">
+                <h4>Experience (if any)</h4>
+                <p>Internships, part-time work, research. Role | Company | Duration</p>
+              </div>
+            </div>
+            <div class="fs-item">
+              <div class="fs-num">6</div>
+              <div class="fs-content">
+                <h4>Achievements & Extra-Curriculars</h4>
+                <p>Hackathon wins, competitive programming rankings, leadership roles, publications.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SAMPLE RESUME -->
+      <div class="resume-section" id="sample" style="display:none;">
+        <div class="sample-resume-preview">
+          <div class="sr-download-bar">
+            <p>Sample fresher resume template</p>
+            <button class="btn btn-primary" onclick="alert('Download feature coming soon!')">⬇ Download Template</button>
+          </div>
+          <div class="sample-resume">
+            <div class="sr-header">
+              <h1>Rahul Sharma</h1>
+              <div class="sr-contact">
+                <span>📞 +91 98765 43210</span>
+                <span>✉ rahul@email.com</span>
+                <span>🔗 linkedin.com/in/rahul</span>
+                <span>💻 github.com/rahul</span>
+              </div>
+            </div>
+            <div class="sr-section">
+              <h3>EDUCATION</h3>
+              <div class="sr-entry">
+                <div class="sr-row"><strong>B.Tech – Computer Science</strong><span>2021 – 2025</span></div>
+                <div class="sr-row muted">XYZ Engineering College, Bangalore | CGPA: 8.4/10</div>
+              </div>
+            </div>
+            <div class="sr-section">
+              <h3>TECHNICAL SKILLS</h3>
+              <div class="sr-skills">
+                <p><strong>Languages:</strong> Python, JavaScript, Java, C++</p>
+                <p><strong>Frameworks:</strong> React.js, Node.js, Express, Flask</p>
+                <p><strong>Tools:</strong> Git, GitHub, VS Code, Postman, Docker (basic)</p>
+                <p><strong>Databases:</strong> MySQL, MongoDB</p>
+              </div>
+            </div>
+            <div class="sr-section">
+              <h3>PROJECTS</h3>
+              <div class="sr-entry">
+                <div class="sr-row"><strong>PlacePro – Student Placement Platform</strong><span class="tech-tag">React | Node.js | MongoDB</span></div>
+                <ul class="sr-bullets">
+                  <li>Developed a full-stack web platform for placement preparation, serving 200+ beta users</li>
+                  <li>Built interactive MCQ engine with real-time scoring, timer, and explanation support</li>
+                  <li>Integrated REST APIs for user auth, question bank, and progress tracking</li>
+                </ul>
+              </div>
+              <div class="sr-entry" style="margin-top:10px;">
+                <div class="sr-row"><strong>Real-Time Chat Application</strong><span class="tech-tag">Socket.io | React | Express</span></div>
+                <ul class="sr-bullets">
+                  <li>Built a real-time group chat app supporting 50+ concurrent users with WebSocket</li>
+                  <li>Implemented JWT-based authentication and message encryption</li>
+                </ul>
+              </div>
+            </div>
+            <div class="sr-section">
+              <h3>ACHIEVEMENTS</h3>
+              <ul class="sr-bullets">
+                <li>🏆 2nd Place – Smart India Hackathon 2024 (among 500+ teams)</li>
+                <li>Solved 150+ problems on LeetCode (Rating: 1650)</li>
+                <li>Served as Technical Secretary, Student Council 2023-24</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- AI CHECKER -->
+      <div class="resume-section" id="ai" style="display:none;">
+        <div class="ai-checker">
+          <div class="ai-intro">
+            <h3>🤖 AI Resume Feedback</h3>
+            <p>Paste a bullet point or your resume summary below and get instant AI-powered feedback on how to improve it.</p>
+          </div>
+          <div class="ai-input-area">
+            <label>Paste your resume bullet point or summary:</label>
+            <textarea id="resumeInput" class="ai-textarea" placeholder="Example: Responsible for developing the website and adding features to it..."></textarea>
+            <button class="btn btn-primary" onclick="getAIFeedback()">Get AI Feedback →</button>
+          </div>
+          <div class="ai-result" id="aiResult" style="display:none;">
+            <div class="ai-loading" id="aiLoading">
+              <div class="spinner"></div>
+              <span>Analyzing your text...</span>
+            </div>
+            <div class="ai-feedback" id="aiFeedback" style="display:none;"></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <script src="js/app.js"></script>
+  <script>
+    function showResume(id, btn) {
+      document.querySelectorAll('.resume-section').forEach(s => s.style.display = 'none');
+      document.getElementById(id).style.display = 'block';
+      document.querySelectorAll('.cat-tab').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    }
+
+    async function getAIFeedback() {
+      const input = document.getElementById('resumeInput').value.trim();
+      if (!input) { alert('Please enter some text first!'); return; }
+
+      document.getElementById('aiResult').style.display = 'block';
+      document.getElementById('aiLoading').style.display = 'flex';
+      document.getElementById('aiFeedback').style.display = 'none';
+
+      try {
+        const response = await fetch('https://api.anthropic.com/v1/messages', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            model: 'claude-sonnet-4-20250514',
+            max_tokens: 1000,
+            messages: [{
+              role: 'user',
+              content: `You are a career coach helping engineering students improve their resume bullet points for campus placements in India. 
+
+Analyze this resume content and provide:
+1. What's wrong with it (specific issues)
+2. An improved rewritten version
+3. 2-3 tips for making it even stronger
+
+Keep your response concise, practical, and formatted clearly. Use bullet points.
+
+Resume content: "${input}"`
+            }]
+          })
+        });
+        const data = await response.json();
+        const text = data.content.map(c => c.text || '').join('');
+        document.getElementById('aiLoading').style.display = 'none';
+        document.getElementById('aiFeedback').style.display = 'block';
+        document.getElementById('aiFeedback').innerHTML = formatMarkdown(text);
+      } catch (e) {
+        document.getElementById('aiLoading').style.display = 'none';
+        document.getElementById('aiFeedback').style.display = 'block';
+        document.getElementById('aiFeedback').innerHTML = '<p class="error-text">Could not connect to AI service. Please try again.</p>';
+      }
+    }
+
+    function formatMarkdown(text) {
+      return text
+        .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+        .replace(/\*(.*?)\*/g, '<em>$1</em>')
+        .replace(/^### (.*)/gm, '<h4>$1</h4>')
+        .replace(/^## (.*)/gm, '<h3>$1</h3>')
+        .replace(/^# (.*)/gm, '<h3>$1</h3>')
+        .replace(/^- (.*)/gm, '<li>$1</li>')
+        .replace(/(<li>.*<\/li>)/gs, '<ul>$1</ul>')
+        .replace(/\n\n/g, '</p><p>')
+        .replace(/^(?!<[hup])/gm, '<p>')
+        .replace(/(?<![>])\n(?![<])/g, '<br/>');
+    }
+  </script>
+</body>
+</html>

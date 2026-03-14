@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Coding Practice – PlacePro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="logo">Place<span>Pro</span></a>
+      <ul class="nav-links">
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="aptitude.html">Aptitude</a></li>
+        <li><a href="coding.html" class="active">Coding</a></li>
+        <li><a href="interview.html">Interview</a></li>
+        <li><a href="resume.html">Resume</a></li>
+      </ul>
+      <div class="nav-actions"><span class="user-pill">👤 Rahul</span></div>
+    </div>
+  </nav>
+
+  <main class="coding-main">
+    <!-- PROBLEM LIST SIDEBAR -->
+    <aside class="problem-sidebar">
+      <div class="ps-header">
+        <h3>Problems</h3>
+        <select class="diff-filter" onchange="filterProblems(this.value)">
+          <option value="all">All</option>
+          <option value="easy">Easy</option>
+          <option value="medium">Medium</option>
+          <option value="hard">Hard</option>
+        </select>
+      </div>
+      <div class="problem-list" id="problemList">
+        <!-- JS rendered -->
+      </div>
+    </aside>
+
+    <!-- MAIN EDITOR AREA -->
+    <div class="coding-content">
+      <!-- PROBLEM DESCRIPTION -->
+      <div class="problem-desc" id="problemDesc">
+        <div class="pd-header">
+          <h2 id="problemTitle">Two Sum</h2>
+          <div class="pd-tags">
+            <span class="tag easy" id="problemDiff">Easy</span>
+            <span class="tag">Arrays</span>
+            <span class="tag">Hash Map</span>
+          </div>
+        </div>
+        <div class="pd-body" id="problemBody">
+          <p>Given an array of integers <code>nums</code> and an integer <code>target</code>, return indices of the two numbers such that they add up to <code>target</code>.</p>
+          <p>You may assume that each input would have exactly one solution, and you may not use the same element twice.</p>
+          <div class="example-box">
+            <strong>Example 1:</strong>
+            <pre>Input: nums = [2,7,11,15], target = 9
+Output: [0,1]
+Explanation: nums[0] + nums[1] == 9</pre>
+          </div>
+          <div class="example-box">
+            <strong>Example 2:</strong>
+            <pre>Input: nums = [3,2,4], target = 6
+Output: [1,2]</pre>
+          </div>
+          <div class="constraints">
+            <strong>Constraints:</strong>
+            <ul>
+              <li>2 ≤ nums.length ≤ 10⁴</li>
+              <li>-10⁹ ≤ nums[i] ≤ 10⁹</li>
+              <li>Only one valid answer exists.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- EDITOR -->
+      <div class="editor-panel">
+        <div class="editor-topbar">
+          <select class="lang-select" id="langSelect" onchange="changeLang(this.value)">
+            <option value="python">Python</option>
+            <option value="javascript">JavaScript</option>
+            <option value="java">Java</option>
+            <option value="cpp">C++</option>
+          </select>
+          <div class="editor-actions">
+            <button class="btn btn-ghost" onclick="resetCode()">Reset</button>
+            <button class="btn btn-outline" onclick="runCode()">▶ Run</button>
+            <button class="btn btn-primary" onclick="submitCode()">Submit ✓</button>
+          </div>
+        </div>
+        <div class="code-editor-wrap">
+          <textarea class="code-editor" id="codeEditor" spellcheck="false"></textarea>
+          <div class="line-nums" id="lineNums">1</div>
+        </div>
+
+        <!-- OUTPUT -->
+        <div class="output-panel">
+          <div class="output-tabs">
+            <button class="out-tab active" onclick="switchOutput('output', this)">Output</button>
+            <button class="out-tab" onclick="switchOutput('testcases', this)">Test Cases</button>
+            <button class="out-tab" onclick="switchOutput('solution', this)">Solution</button>
+          </div>
+          <div class="output-content" id="outputContent">
+            <div class="output-placeholder">Run your code to see the output here.</div>
+          </div>
+          <div class="output-content" id="testcasesContent" style="display:none;">
+            <div class="tc-row"><span class="tc-label">Test 1</span><code>[2,7,11,15], target=9</code><span class="tc-exp">→ [0,1]</span></div>
+            <div class="tc-row"><span class="tc-label">Test 2</span><code>[3,2,4], target=6</code><span class="tc-exp">→ [1,2]</span></div>
+            <div class="tc-row"><span class="tc-label">Test 3</span><code>[3,3], target=6</code><span class="tc-exp">→ [0,1]</span></div>
+          </div>
+          <div class="output-content" id="solutionContent" style="display:none;">
+            <pre class="solution-code">def twoSum(nums, target):
+    seen = {}
+    for i, num in enumerate(nums):
+        complement = target - num
+        if complement in seen:
+            return [seen[complement], i]
+        seen[num] = i</pre>
+            <p class="sol-explain">💡 Use a hash map to store each number and check if the complement exists in O(n) time.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/app.js"></script>
+  <script src="js/coding.js"></script>
+</body>
+</html>

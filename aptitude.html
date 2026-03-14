@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Aptitude Practice – PlacePro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="logo">Place<span>Pro</span></a>
+      <ul class="nav-links">
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="aptitude.html" class="active">Aptitude</a></li>
+        <li><a href="coding.html">Coding</a></li>
+        <li><a href="interview.html">Interview</a></li>
+        <li><a href="resume.html">Resume</a></li>
+      </ul>
+      <div class="nav-actions"><span class="user-pill">👤 Rahul</span></div>
+    </div>
+  </nav>
+
+  <main class="page-main">
+    <div class="container">
+      <div class="page-header">
+        <div>
+          <h1>🧮 Aptitude Practice</h1>
+          <p class="muted">Test your quantitative, logical &amp; verbal skills</p>
+        </div>
+        <div class="apt-score-badge">Score: <span id="scoreDisplay">0</span> / <span id="totalDisplay">10</span></div>
+      </div>
+
+      <!-- CATEGORY TABS -->
+      <div class="cat-tabs">
+        <button class="cat-tab active" onclick="loadCategory('quant', this)">📐 Quantitative</button>
+        <button class="cat-tab" onclick="loadCategory('logical', this)">🧩 Logical</button>
+        <button class="cat-tab" onclick="loadCategory('verbal', this)">📝 Verbal</button>
+      </div>
+
+      <!-- QUIZ AREA -->
+      <div class="quiz-layout">
+        <div class="quiz-main">
+          <!-- TIMER & PROGRESS -->
+          <div class="quiz-topbar">
+            <div class="q-counter">Question <span id="qNum">1</span> of <span id="qTotal">10</span></div>
+            <div class="timer-box">⏱ <span id="timerDisplay">30</span>s</div>
+          </div>
+          <div class="q-progress-bar"><div class="q-progress-fill" id="qProgressFill"></div></div>
+
+          <!-- QUESTION -->
+          <div class="question-card" id="questionCard">
+            <h3 id="questionText">What is 15% of 200?</h3>
+            <div class="options-grid" id="optionsGrid">
+              <!-- Options injected by JS -->
+            </div>
+          </div>
+
+          <!-- EXPLANATION (hidden until answer) -->
+          <div class="explanation-box" id="explanationBox" style="display:none;">
+            <h4>💡 Explanation</h4>
+            <p id="explanationText"></p>
+          </div>
+
+          <!-- CONTROLS -->
+          <div class="quiz-controls">
+            <button class="btn btn-ghost" onclick="prevQuestion()" id="prevBtn" disabled>← Previous</button>
+            <button class="btn btn-primary" onclick="nextQuestion()" id="nextBtn">Next →</button>
+          </div>
+        </div>
+
+        <!-- SIDEBAR -->
+        <div class="quiz-sidebar">
+          <div class="qs-card">
+            <h4>Question Map</h4>
+            <div class="q-map" id="qMap"></div>
+          </div>
+          <div class="qs-card" id="scoreCard" style="display:none;">
+            <h4>Session Score</h4>
+            <div class="score-circle">
+              <span id="finalScore">0</span><small>/10</small>
+            </div>
+            <p style="text-align:center; margin-top:8px; color:#666;">
+              <span id="scoreFeedback"></span>
+            </p>
+            <button class="btn btn-primary btn-full" onclick="restartQuiz()" style="margin-top:12px;">Try Again</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/app.js"></script>
+  <script src="js/aptitude.js"></script>
+</body>
+</html>

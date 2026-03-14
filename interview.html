@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Interview Prep – PlacePro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="logo">Place<span>Pro</span></a>
+      <ul class="nav-links">
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="aptitude.html">Aptitude</a></li>
+        <li><a href="coding.html">Coding</a></li>
+        <li><a href="interview.html" class="active">Interview</a></li>
+        <li><a href="resume.html">Resume</a></li>
+      </ul>
+      <div class="nav-actions"><span class="user-pill">👤 Rahul</span></div>
+    </div>
+  </nav>
+
+  <main class="page-main">
+    <div class="container">
+      <div class="page-header">
+        <div>
+          <h1>🎤 Interview Preparation</h1>
+          <p class="muted">Master HR rounds, technical questions, and group discussions</p>
+        </div>
+      </div>
+
+      <!-- TABS -->
+      <div class="cat-tabs">
+        <button class="cat-tab active" onclick="showSection('hr', this)">👔 HR Questions</button>
+        <button class="cat-tab" onclick="showSection('technical', this)">💡 Technical</button>
+        <button class="cat-tab" onclick="showSection('tips', this)">⭐ Tips & Tricks</button>
+      </div>
+
+      <!-- HR QUESTIONS -->
+      <div class="interview-section" id="hr">
+        <div class="qa-grid">
+          <div class="qa-card">
+            <div class="qa-q" onclick="toggleAnswer(this)">
+              <span>Tell me about yourself.</span>
+              <span class="qa-arrow">▼</span>
+            </div>
+            <div class="qa-a">
+              <p><strong>Structure:</strong> Present → Past → Future</p>
+              <p><strong>Sample:</strong> "I'm a final-year Computer Science student at [College]. I've built projects in web development and machine learning, including a real-time chat application. I'm passionate about solving real-world problems with technology. I'm looking forward to starting my career with a company that values innovation, which is why I'm excited about this opportunity."</p>
+              <div class="qa-tip">💡 <strong>Tip:</strong> Keep it under 2 minutes. Practice until it sounds natural, not memorized.</div>
+            </div>
+          </div>
+          <div class="qa-card">
+            <div class="qa-q" onclick="toggleAnswer(this)">
+              <span>What are your strengths and weaknesses?</span>
+              <span class="qa-arrow">▼</span>
+            </div>
+            <div class="qa-a">
+              <p><strong>Strength:</strong> Choose a strength relevant to the role. Back it with an example.</p>
+              <p><strong>Sample (Strength):</strong> "My biggest strength is problem-solving. When our team's final-year project hit a performance bottleneck, I identified that redundant API calls were the issue and reduced load time by 60%."</p>
+              <p><strong>Weakness:</strong> Choose a real weakness but show you're actively improving it.</p>
+              <p><strong>Sample (Weakness):</strong> "I tend to over-research before starting a task. I've started using timeboxing — giving myself 30 minutes for research, then committing to action — which has made me significantly more productive."</p>
+              <div class="qa-tip">⚠️ Never say "I'm a perfectionist" — interviewers have heard it too many times.</div>
+            </div>
+          </div>
+          <div class="qa-card">
+            <div class="qa-q" onclick="toggleAnswer(this)">
+              <span>Why do you want to join our company?</span>
+              <span class="qa-arrow">▼</span>
+            </div>
+            <div class="qa-a">
+              <p>Research the company before your interview. Mention specific products, culture, or values.</p>
+              <p><strong>Sample:</strong> "I've been following [Company]'s work in fintech for a while. Your recent launch of [Product] showed me how seriously you take user-centric design. I'm excited to contribute to a team that builds tools that actually impact millions of lives."</p>
+              <div class="qa-tip">💡 Interviewers instantly notice when you've done your homework. Spend at least 30 mins researching.</div>
+            </div>
+          </div>
+          <div class="qa-card">
+            <div class="qa-q" onclick="toggleAnswer(this)">
+              <span>Where do you see yourself in 5 years?</span>
+              <span class="qa-arrow">▼</span>
+            </div>
+            <div class="qa-a">
+              <p>Show ambition while aligning with the company's growth opportunities.</p>
+              <p><strong>Sample:</strong> "In 5 years, I see myself having developed deep technical expertise and taking on leadership responsibilities — possibly leading a small team. I want to grow alongside the company and contribute to meaningful products at scale."</p>
+              <div class="qa-tip">💡 Don't say "I want to start my own company" in an early-career interview.</div>
+            </div>
+          </div>
+          <div class="qa-card">
+            <div class="qa-q" onclick="toggleAnswer(this)">
+              <span>Describe a challenge you faced and how you handled it.</span>
+              <span class="qa-arrow">▼</span>
+            </div>
+            <div class="qa-a">
+              <p>Use the <strong>STAR method</strong>: Situation → Task → Action → Result</p>
+              <p><strong>Sample:</strong> "During our college hackathon (S), I was tasked with integrating payments in 24 hours (T). The API docs were outdated, so I reached out to their developer forum and found a workaround (A). We shipped on time and won 2nd place (R)."</p>
+              <div class="qa-tip">💡 Always end with a quantified result if possible.</div>
+            </div>
+          </div>
+          <div class="qa-card">
+            <div class="qa-q" onclick="toggleAnswer(this)">
+              <span>Do you have any questions for us?</span>
+              <span class="qa-arrow">▼</span>
+            </div>
+            <div class="qa-a">
+              <p>Always have 2-3 smart questions ready. Never say "No, I'm good."</p>
+              <ul class="qa-list">
+                <li>"What does the onboarding process look like for new engineers?"</li>
+                <li>"What's the biggest challenge the team is currently working on?"</li>
+                <li>"How do you measure success for someone in this role in the first 6 months?"</li>
+              </ul>
+              <div class="qa-tip">💡 Asking good questions shows genuine interest and maturity.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TECHNICAL -->
+      <div class="interview-section" id="technical" style="display:none;">
+        <div class="tech-categories">
+          <div class="tech-cat">
+            <h3>🗃️ Data Structures & Algorithms</h3>
+            <div class="tech-qa-list">
+              <div class="qa-card small">
+                <div class="qa-q" onclick="toggleAnswer(this)"><span>What is the difference between Array and Linked List?</span><span class="qa-arrow">▼</span></div>
+                <div class="qa-a">
+                  <table class="comp-table">
+                    <tr><th>Feature</th><th>Array</th><th>Linked List</th></tr>
+                    <tr><td>Access</td><td>O(1) random</td><td>O(n) sequential</td></tr>
+                    <tr><td>Insertion</td><td>O(n)</td><td>O(1) at head</td></tr>
+                    <tr><td>Memory</td><td>Contiguous</td><td>Non-contiguous</td></tr>
+                    <tr><td>Size</td><td>Fixed</td><td>Dynamic</td></tr>
+                  </table>
+                </div>
+              </div>
+              <div class="qa-card small">
+                <div class="qa-q" onclick="toggleAnswer(this)"><span>Explain Big O notation with examples.</span><span class="qa-arrow">▼</span></div>
+                <div class="qa-a">
+                  <p>Big O describes the worst-case time/space complexity as input grows.</p>
+                  <ul class="qa-list">
+                    <li><strong>O(1)</strong> – Constant: Array index access</li>
+                    <li><strong>O(log n)</strong> – Logarithmic: Binary search</li>
+                    <li><strong>O(n)</strong> – Linear: Simple loop</li>
+                    <li><strong>O(n²)</strong> – Quadratic: Bubble sort / nested loops</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="qa-card small">
+                <div class="qa-q" onclick="toggleAnswer(this)"><span>What is the difference between Stack and Queue?</span><span class="qa-arrow">▼</span></div>
+                <div class="qa-a">
+                  <p><strong>Stack</strong> – LIFO (Last In First Out). Example: browser back button, function call stack.</p>
+                  <p><strong>Queue</strong> – FIFO (First In First Out). Example: print queue, BFS traversal.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tech-cat">
+            <h3>🌐 Web & CS Fundamentals</h3>
+            <div class="tech-qa-list">
+              <div class="qa-card small">
+                <div class="qa-q" onclick="toggleAnswer(this)"><span>What is the difference between GET and POST?</span><span class="qa-arrow">▼</span></div>
+                <div class="qa-a">
+                  <p><strong>GET:</strong> Retrieves data. Parameters visible in URL. Cached. Used for fetching.</p>
+                  <p><strong>POST:</strong> Sends data in request body. Not cached. Used for creating/updating data.</p>
+                </div>
+              </div>
+              <div class="qa-card small">
+                <div class="qa-q" onclick="toggleAnswer(this)"><span>Explain OOP concepts with examples.</span><span class="qa-arrow">▼</span></div>
+                <div class="qa-a">
+                  <ul class="qa-list">
+                    <li><strong>Encapsulation</strong> – Hiding data (private fields with getters/setters)</li>
+                    <li><strong>Inheritance</strong> – Child class extends parent class</li>
+                    <li><strong>Polymorphism</strong> – Same method, different behavior (method overriding)</li>
+                    <li><strong>Abstraction</strong> – Hiding complexity (abstract classes, interfaces)</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TIPS -->
+      <div class="interview-section" id="tips" style="display:none;">
+        <div class="tips-grid">
+          <div class="tip-card">
+            <div class="tip-icon">🧠</div>
+            <h4>Research Thoroughly</h4>
+            <p>Study the company's products, recent news, team culture, and tech stack at least a day before.</p>
+          </div>
+          <div class="tip-card">
+            <div class="tip-icon">👔</div>
+            <h4>Dress Appropriately</h4>
+            <p>Business casual for most tech companies. When in doubt, dress one level above what you expect.</p>
+          </div>
+          <div class="tip-card">
+            <div class="tip-icon">🕐</div>
+            <h4>Arrive 10 Min Early</h4>
+            <p>For virtual interviews, test your camera, mic, and internet 30 minutes before the call.</p>
+          </div>
+          <div class="tip-card">
+            <div class="tip-icon">💬</div>
+            <h4>Think Aloud</h4>
+            <p>Interviewers want to see your thinking process. Narrate your reasoning even when you're unsure.</p>
+          </div>
+          <div class="tip-card">
+            <div class="tip-icon">🤝</div>
+            <h4>Use STAR Method</h4>
+            <p>Situation, Task, Action, Result — structure every behavioral answer with this framework.</p>
+          </div>
+          <div class="tip-card">
+            <div class="tip-icon">❓</div>
+            <h4>Ask Smart Questions</h4>
+            <p>Prepare 3-4 thoughtful questions. It shows initiative and genuine interest in the role.</p>
+          </div>
+          <div class="tip-card">
+            <div class="tip-icon">😌</div>
+            <h4>Manage Nerves</h4>
+            <p>Take a deep breath before answering. A 2-second pause to think is seen as confidence, not hesitation.</p>
+          </div>
+          <div class="tip-card">
+            <div class="tip-icon">📧</div>
+            <h4>Send a Thank You</h4>
+            <p>Email a brief thank-you note within 24 hours of your interview. It sets you apart from other candidates.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/app.js"></script>
+  <script>
+    function showSection(id, btn) {
+      document.querySelectorAll('.interview-section').forEach(s => s.style.display = 'none');
+      document.getElementById(id).style.display = 'block';
+      document.querySelectorAll('.cat-tab').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    }
+    function toggleAnswer(el) {
+      const ans = el.nextElementSibling;
+      const arrow = el.querySelector('.qa-arrow');
+      ans.classList.toggle('open');
+      arrow.textContent = ans.classList.contains('open') ? '▲' : '▼';
+    }
+  </script>
+</body>
+</html>
